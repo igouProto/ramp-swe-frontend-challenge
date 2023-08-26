@@ -35,6 +35,11 @@ export function useCustomFetch() {
     ): Promise<TData | null> =>
       wrappedRequest<TData>(async () => {
         const result = await fakeFetch<TData>(endpoint, params)
+        // bug 7 solution:
+        // the checkbox sends a fetchWithoutCache request to the server to update the data
+        // so the cache should be invalidated after the request since the data is now different
+        // it's like forcing a cache miss to make the next fetchWithCache request get the new data
+        clearCacheByEndpoint(["transactionsByEmployee", "paginatedTransactions"]);
         return result
       }),
     [wrappedRequest]

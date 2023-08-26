@@ -68,7 +68,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 ---
 
-# [v] Bug 1: Select dropdown doesn't scroll with rest of the page
+# - [x] Bug 1: Select dropdown doesn't scroll with rest of the page
 
 **How to reproduce:**
 
@@ -80,7 +80,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** Options dropdown stays in the same position as you scroll the page, losing the reference to the select input
 
-# [v] Bug 2: Approve checkbox not working
+# - [x] Bug 2: Approve checkbox not working
 
 **How to reproduce:**
 
@@ -90,7 +90,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** Nothing happens
 
-# [v] Bug 3: Cannot select _All Employees_ after selecting an employee
+# - [x] Bug 3: Cannot select _All Employees_ after selecting an employee
 
 **How to reproduce:**
 
@@ -103,7 +103,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** The page crashes
 
-# [v] Bug 4: Clicking on View More button not showing correct data
+# - [x] Bug 4: Clicking on View More button not showing correct data
 
 **How to reproduce:**
 
@@ -114,7 +114,7 @@ We don't have a real API for this challenge, so we added some utilities to simul
 
 **Actual:** New transactions replace initial transactions, losing initial transactions
 
-# [v] Bug 5: Employees filter not available during loading more data
+# - [x] Bug 5: Employees filter not available during loading more data
 
 _This bug has 2 wrong behaviors that will be fixed with the same solution_
 
@@ -142,7 +142,7 @@ _This bug has 2 wrong behaviors that will be fixed with the same solution_
 
 **Actual:** The employees filter shows "Loading employees..." after clicking **View more** until new transactions are loaded.
 
-# [v] Bug 6: View more button not working as expected
+# - [x] Bug 6: View more button not working as expected
 
 _This bug has 2 wrong behaviors that can be fixed with the same solution. It's acceptable to fix with separate solutions as well._
 
@@ -170,7 +170,7 @@ _This bug has 2 wrong behaviors that can be fixed with the same solution. It's a
 
 **Actual:** When you reach the end of the data, the **View More** button is still showing and you are still able to click the button. If you click it, the page crashes.
 
-# Bug 7: Approving a transaction won't persist the new value
+# - [x] Bug 7: Approving a transaction won't persist the new value
 
 _You need to fix some of the previous bugs in order to reproduce_
 
