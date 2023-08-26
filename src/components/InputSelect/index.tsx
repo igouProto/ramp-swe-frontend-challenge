@@ -107,7 +107,14 @@ export function InputSelect<TItem>({
             return null
           }
 
-          if (isLoading) {
+          // bug 5 solution:
+          // since the employee list could be ready before the transactions list,
+          // we also have to know if it's loading or not, can't let the loading status of
+          // transactions determine the loading status of employees
+          // one way to do this is to check if the employee list is at length 0
+          // this solves part 2 of bug 5 since loading more transactions will not
+          // affect the loading status of the employee list anymore
+          if (isLoading && items.length === 0) {
             return <div className="RampInputSelect--dropdown-item">{loadingLabel}...</div>
           }
 
