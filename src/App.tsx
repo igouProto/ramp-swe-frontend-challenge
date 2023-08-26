@@ -67,7 +67,7 @@ export function App() {
             // bug 3 solution:
             // instead of using the employee's id as the key,
             // call loadAllTransactions() to fetch all transactions
-            // if the user selects the "All" option
+            // if the user selects the "All" option such that the employee's id is null
             if (newValue.id === EMPTY_EMPLOYEE.id) await loadAllTransactions();
             else await loadTransactionsByEmployee(newValue.id);
           }}

@@ -21,8 +21,11 @@ export function usePaginatedTransactions(): PaginatedTransactionsResult {
       if (response === null || previousResponse === null) {
         return response
       }
-
-      return { data: response.data, nextPage: response.nextPage }
+      // bug 4 solution:
+      // the reason why new transactions are replacing the old ones 
+      // is because that they're not using the previous data
+      // merging the previous data with the new data will solve the problem
+      return { data: [...previousResponse.data,...response.data], nextPage: response.nextPage }
     })
   }, [fetchWithCache, paginatedTransactions])
 
